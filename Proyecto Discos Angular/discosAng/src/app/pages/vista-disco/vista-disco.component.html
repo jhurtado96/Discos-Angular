@@ -1,0 +1,24 @@
+
+<button style="margin: 20px;" type="button" on-click="mostrarDisco(id.valueAsNumber)" class="btn btn-primary">Mostrar</button>
+
+<form style="margin: 20px;">
+    <div class="form-group">
+        <label for="inputAddress">Introduce el ID</label>
+        <input type="number" class="form-control" placeholder="Codigo"  #id>
+    </div>
+</form>
+
+<div style="margin: 20px;" *ngIf="pulsar">
+<div style="margin: 20px;" *ngFor="let disco of discos" class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{disco.id}}</h5>
+          <p class="card-text">{{disco.titulo}}</p>
+          <p class="card-text">{{disco.interprete}}</p>
+          <p class="card-text">{{disco.anyoPublicacion}}</p>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
