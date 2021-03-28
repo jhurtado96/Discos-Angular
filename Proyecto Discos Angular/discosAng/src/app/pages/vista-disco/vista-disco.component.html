@@ -7,7 +7,10 @@
         <input type="number" class="form-control" placeholder="Codigo"  #id>
     </div>
 </form>
-<p>{{ mensaje }}</p>
+<div *ngIf="pulsar">
+  <p style="margin: 20px;">{{ mensaje }}</p>
+</div>
+
 <div style="margin: 20px;" *ngIf="pulsar">
 <div style="margin: 20px;" *ngFor="let disco of discos" class="row">
     <div class="col-sm-6">

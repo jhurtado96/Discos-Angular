@@ -18,14 +18,18 @@ export class VistaDiscoComponent implements OnInit {
 
   mostrarDisco(id:number){
     this.pulsar=true
+    this.mensaje=""
     console.log(id)
     if (id!=NaN) {
-      this.discoService.obtenerDisco(id).subscribe((data:any[]) =>
+      this.discoService.obtenerDisco(id).subscribe((data:any) =>
     {
       
-     if (data[1]=='No existe el disco') {
-       this.mensaje=data[1]
-     }else{ this.discos=data}
+     if (data.mensaje=='No existe el disco') {
+       this.mensaje=data.mensaje
+       
+     }else{ 
+      this.mensaje="" 
+      this.discos=data}
        
       
       
