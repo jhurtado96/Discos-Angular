@@ -81,7 +81,8 @@ app.post("/discos",
                 }
                 else response.send(error)
             } else {
-                res.send({ mensaje: 'disco añadido con ID: ' + resultado.id })
+                console.log(resultado);
+                res.send({ mensaje: 'disco añadido con ID: ' + resultado.insertId})
             }
         })
 

@@ -19,7 +19,7 @@ export class FormularioDiscoComponent implements OnInit {
     .subscribe((data:any) =>
     {
     if (data.mensaje == 'disco añadido') {
-      this.mensaje=data.mensaje
+      this.mensaje=data.mensaje 
     } else{
       this.mensaje=data.mensaje
     }
@@ -33,8 +33,7 @@ export class FormularioDiscoComponent implements OnInit {
       if (data.affectedRows==0) {
         this.mensaje=data.mensaje
       
-        // if (data.mensaje=='Disco modificado') {
-        //   this.mensaje=data.mensaje
+        
         }else{
           this.mensaje=data.mensaje
         }
