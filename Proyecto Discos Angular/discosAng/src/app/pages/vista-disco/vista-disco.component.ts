@@ -12,13 +12,15 @@ export class VistaDiscoComponent implements OnInit {
   public mensaje:String
   public pulsar:boolean
   constructor(private discoService:DiscoService) { 
-    
+    this.mensaje=""
     this.pulsar=false;
+    
   }
 
   mostrarDisco(id:number){
     this.pulsar=true
     this.mensaje=""
+    this.discos=[]
     console.log(id)
     if (id!=NaN) {
       this.discoService.obtenerDisco(id).subscribe((data:any) =>
@@ -29,12 +31,8 @@ export class VistaDiscoComponent implements OnInit {
        
      }else{ 
       this.mensaje="" 
-      this.discos=data}
-       
-      
-      
-      
-      
+      this.discos=data
+    }
     })
     }else{
     this.discoService.obtenerDisco(id).subscribe((data:Disco[]) =>
