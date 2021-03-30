@@ -77,7 +77,7 @@ app.post("/discos",
 
             if (error) {
                 if (error.code == "ER_BAD_NULL_ERROR") {
-                    res.send({ mensaje: 'No puedes introducir un valor nulo'})
+                    res.send({ mensaje: 'Completa todos los campos'})                 
                 }
                 else response.send(error)
             } else {

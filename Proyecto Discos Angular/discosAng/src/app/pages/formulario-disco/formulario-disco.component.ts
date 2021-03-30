@@ -18,6 +18,15 @@ export class FormularioDiscoComponent implements OnInit {
     this.discoService.meterDisco(new Disco(0,titulo,interprete,anyoPublicacion))
     .subscribe((data:any) =>
     {
+    //  if (interprete == null || titulo==null || anyoPublicacion == null) {
+    //    this.mensaje=data.mensaje
+    //  } else if(data.mensaje == 'disco añadido'){
+    //     this.mensaje=data.mensaje
+    //  }
+
+
+
+
     if (data.mensaje == 'disco añadido') {
       this.mensaje=data.mensaje 
     } else{
