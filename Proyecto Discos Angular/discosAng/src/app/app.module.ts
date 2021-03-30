@@ -5,17 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormularioDiscoComponent } from './pages/formulario-disco/formulario-disco.component';
 import { VistaDiscoComponent } from './pages/vista-disco/vista-disco.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { TemplateComponent } from './pages/template/template.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioDiscoComponent,
-    VistaDiscoComponent
+    VistaDiscoComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

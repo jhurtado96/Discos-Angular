@@ -9,10 +9,15 @@ import { DiscoService } from 'src/app/shared/disco.service';
 })
 export class FormularioDiscoComponent implements OnInit {
   public mensaje:String
-  constructor(private discoService: DiscoService) { }
+  public disco:Disco
+  constructor(private discoService: DiscoService) {
+    this.disco
+   }
 
   ngOnInit(): void {
   }
+
+
 
   insertarDisco(titulo:string,interprete:string,anyoPublicacion:number){
     this.discoService.meterDisco(new Disco(0,titulo,interprete,anyoPublicacion))
